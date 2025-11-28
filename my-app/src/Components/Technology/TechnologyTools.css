@@ -1,0 +1,104 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toolsTechnology{
+  padding: 70px 20px;
+   max-width: 100%;
+   /* background: linear-gradient(132deg, #001334 209%, #001B44 253%); */
+}
+
+
+
+
+.technologyC{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.toolsTinner{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.toolsTinner h1, p{
+  text-align: center;
+  margin: 0;
+  color: white;
+
+}
+.toolsTinner h1{
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 600;
+   font-family: "Stack Sans Notch", sans-serif;
+   color: white;
+}
+
+.toolsTinner > p{
+  text-align: center;
+  margin: 0;
+  padding: 40px 0 40px 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+
+}
+
+
+
+.techItem {
+display: flex;
+
+flex-direction: column;
+align-items: center;
+
+}
+
+.techItem img{
+  width: 65px;
+  padding-bottom: 20px;
+}
+
+.techItem > p{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+   color: white;
+  font-family: 'DM Sans', sans-serif;
+
+}
+
+
+/* second */
+
+.toolsTinner2{
+   max-width: 1280px;
+  margin: 0 auto;
+  padding: 70px 0 0 0;
+  
+}
+
+.toolsTinner2 h1{
+  text-align: center;
+   color: white;
+  margin: 0;
+  padding-bottom: 40px;
+   font-size: 40px;
+  line-height: 44px;
+  font-weight: 600;
+   font-family: "Stack Sans Notch", sans-serif;
+
+}
+
+.toolsC{
+   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+
+}

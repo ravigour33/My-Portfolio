@@ -1,0 +1,172 @@
+/* Hide horizontal overflow globally */
+body { overflow-x: hidden; }
+
+.ps-section{
+    padding: 70px 20px 10px 20px;
+  width:100%;
+  
+ /* background: linear-gradient(132deg, #001334 209%, #001B44 253%); */
+}
+
+/* Sticky layer */
+.ps-sticky{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction:column;
+  color:#fff;
+}
+
+/* Header */
+.ps-header{
+  position: relative;
+  text-align:center;
+  margin-bottom:16px;
+}
+.ps-eyebrow{
+  display:block;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+  color: white;
+  font-family: "Stack Sans Notch", sans-serif;
+}
+.ps-header h2{
+    padding-top: 30px;
+  
+  font-size: 40px;
+  line-height: 44px;
+  color: white;
+  font-weight:700;
+  font-family: "Stack Sans Notch", sans-serif;
+}
+.ps-dot{
+  width:12px;height:12px;border-radius:50%;
+  background:#fff;
+  margin:10px auto 0;
+  box-shadow:0 0 18px rgba(255,255,255,.9);
+}
+
+/* Viewport (BOX) */
+.ps-viewport{
+  margin-top:30px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.15);
+  overflow:hidden;
+  background:linear-gradient(135deg, rgba(255,255,255,.08), rgba(0,0,0,.6));
+  box-shadow:0 25px 70px rgba(0,0,0,.8);
+}
+
+/* Track */
+.ps-track{
+  height:100%;
+  display:flex;
+  transition: transform .08s linear; /* scroll feel */
+}
+
+/* Each slide */
+/* ✅ 2 cards per screen → 50vw each */
+.ps-card{
+  flex:0 0 50vw;
+  height:500px;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 20px 20px;
+}
+
+/* Frame (browser-like box) */
+.ps-frame{
+  position:relative;
+  width:100%;
+  height:100%;
+  border-radius:14px;
+  background:#000;
+  overflow:hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,.7);
+}
+
+/* Badge */
+.ps-badge{
+  position:absolute;
+  top:14px; left:14px;
+  z-index:2;
+  padding:10px 20px;
+  border-radius:999px;
+  font-size:20px;
+  border:1px solid rgba(255,255,255,.6);
+  background:rgba(0,0,0,.7);
+  letter-spacing:.08em;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Media */
+.ps-media{
+  width:100%; height:100%;
+}
+.ps-media img{
+  width:100%; height:100%;
+  object-fit:cover;
+  filter: contrast(1.05) saturate(1.05);
+}
+
+/* Bottom meta */
+.ps-meta{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  padding:16px 18px;
+  background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.15) 60%, transparent);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.ps-meta h3{
+  margin:0;
+  font-size:20px;
+  font-weight: 500;
+  font-family: "Stack Sans Notch", sans-serif;
+}
+.ps-meta a{
+  color:#fff;
+  text-decoration:none;
+  
+  font-size:18px;
+  font-weight: 500;
+  font-family: "Stack Sans Notch", sans-serif;
+}
+
+
+
+/* Responsive */
+@media(max-width:768px){
+  .ps-sticky{ padding:18px 14px 20px; }
+  .ps-meta{ flex-direction:column; gap:6px; align-items:flex-start; }
+
+  /* mobile pe ek hi project dikhana ho to: */
+  .ps-card{
+    flex:0 0 100vw;
+  }
+}
+
+
+
+.ps-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Normal state */
+  filter: brightness(0.85) contrast(1.05);
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+
+/* Hover animation */
+.ps-frame:hover .ps-media img {
+  filter: brightness(1) contrast(1.15);
+  transform: scale(1.08);
+}
