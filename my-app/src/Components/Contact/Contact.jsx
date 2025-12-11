@@ -4,7 +4,7 @@ import "./Contact.css";
 const ContactSection = () => {
   const handleEmailClick = () => {
     window.location.href =
-      "mailto:ravigour@example.com?subject=Let%27s%20work%20together&body=Hi%20Ravi,";
+      "mailto:ravigour61848@gmail.com?subject=Let%27s%20work%20together&body=Hi%20Ravi,";
   };
 
   return (
@@ -24,7 +24,7 @@ const ContactSection = () => {
               </button>
 
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/ravigour/"
                 target="_blank"
                 rel="noreferrer"
                 className="c-btn"
@@ -33,7 +33,7 @@ const ContactSection = () => {
               </a>
 
               <a
-                href="https://github.com/"
+                href="https://github.com/ravigour33"
                 target="_blank"
                 rel="noreferrer"
                 className="c-btn"
@@ -46,11 +46,7 @@ const ContactSection = () => {
           <div className="c-bottom">
             <p className="c-thanks">Thanks for scrolling.</p>
 
-            <a
-              href="/Ravi-Gour-Resume.pdf"
-              className="c-resume-btn"
-              download
-            >
+            <a href="/Ravi-Gour-Resume.pdf" className="c-resume-btn" download>
               <span>RESUME</span>
               <span className="c-resume-icon">↗</span>
             </a>
@@ -58,8 +54,6 @@ const ContactSection = () => {
             <div className="c-line" />
           </div>
         </div>
-
-        
       </div>
     </section>
   );

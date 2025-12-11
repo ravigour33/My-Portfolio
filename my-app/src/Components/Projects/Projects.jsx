@@ -1,28 +1,109 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Projects.css";
+import RaanImage from "../../assets/sp1.png";
+import RaanImage2 from "../../assets/sp2.png";
+import RaanImage3 from "../../assets/sp3.png";
+import RaanImage4 from "../../assets/sp4.png";
+import RaanImage5 from "../../assets/bcl.png";
+import RaanImage6 from "../../assets/jma.png";
+import RaanImage7 from "../../assets/pyra.png";
+import RaanImage8 from "../../assets/trust.png";
+import RaanImage9 from "../../assets/lotus.png";
+import RaanImage10 from "../../assets/war.png";
+import RaanImage11 from "../../assets/jor.png";
+import RaanImage12 from "../../assets/mynd.png";
+
 
 const projects = [
   {
-    badge: "SHOPIFY",
-    title: "Dandy Storefront",
+    badge: "WORDPRESS",
+    title: "BCL GLOBIZ",
     image:
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1800&auto=format&fit=crop",
-    link: "#"
+      RaanImage5,
+    link: "https://bcl.ae",
   },
   {
     badge: "WORDPRESS",
-    title: "Reva Growth",
+    title: "jmattachments",
     image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1800&auto=format&fit=crop",
-    link: "#"
+     RaanImage6,
+    link: "https://jmattachments.com/",
+  },
+  {
+    badge: "WORDPRESS",
+    title: "pyramindz",
+    image:
+     RaanImage7,
+    link: "https://pyramindz.com/",
+  },
+  {
+    badge: "WORDPRESS",
+    title: "Varpra",
+    image:
+     RaanImage8,
+    link: "https://varpra.com/",
+  },
+  {
+    badge: "WORDPRESS",
+    title: "TrustNVC",
+    image:
+      RaanImage8,
+    link: "https://trustnvc.com/",
+  },
+  {
+    badge: "WORDPRESS",
+    title: "lotusmdwellness",
+    image:
+      RaanImage9,
+    link: "https://lotusmdwellness.com/",
+  },
+  {
+    badge: "WORDPRESS",
+    title: "wrnelchemali",
+    image:
+     RaanImage10,
+  },
+  {
+    badge: "WORDPRESS",
+    title: "jordanswatersolutions",
+    image:
+      RaanImage11,
+  },
+  {
+    badge: "WORDPRESS",
+    title: "myndfultalk",
+    image:
+     RaanImage12,
+    link: "https://myndfultalk.com/",
+  },
+
+  {
+    badge: "SHOPIFY",
+    title: "Raan",
+    image: RaanImage,
+    link: "https://raan.com/",
   },
   {
     badge: "SHOPIFY",
-    title: "Natural Elegance",
+    title: "thenaturalcraft",
     image:
-      "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1800&auto=format&fit=crop",
-    link: "#"
-  }
+      RaanImage4,
+    link: "https://thenaturalcraft.com/",
+  },
+  {
+    badge: "SHOPIFY",
+    title: "fit2flaunt",
+    image:
+      RaanImage3,
+    link: "https://fit2flaunt.com/",
+  },
+  {
+    badge: "SHOPIFY",
+    title: "podcastmonkey",
+    image:
+      RaanImage2,
+    link: "https://podcastmonkey.co/",
+  },
 ];
 
 export default function ProjectsShowcase() {
@@ -59,6 +140,7 @@ export default function ProjectsShowcase() {
   return (
     <section
       className="ps-section"
+      id=""
       ref={sectionRef}
       style={{ height: `${count * 100}vh` }}
     >
@@ -67,7 +149,6 @@ export default function ProjectsShowcase() {
         <div className="ps-header">
           <span className="ps-eyebrow">EXPLORE</span>
           <h2>My Projects</h2>
-          
         </div>
 
         {/* Slider */}
@@ -77,7 +158,7 @@ export default function ProjectsShowcase() {
             style={{
               // ✅ track width now based on 50vw per card
               width: `${count * 50}vw`,
-              transform: `translateX(-${progress * maxTranslate}vw)`
+              transform: `translateX(-${progress * maxTranslate}vw)`,
             }}
           >
             {projects.map((p, i) => (

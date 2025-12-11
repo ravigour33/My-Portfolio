@@ -114,7 +114,7 @@
   gap: 8px;
   padding: 9px 18px;
   border-radius: 999px;
-  border: 1px solid #334155;
+  border: 1px solid #1d4ed8;
   background: transparent;
   color: #e5e7eb;
   font-size: 0.8rem;
@@ -197,5 +197,12 @@
   .c-card {
     padding: 24px 20px 20px;
     border-radius: 20px;
+  }
+  .c-card{
+    width: 100%;
+  }
+  .c-title{
+    font-size: 32px;
+    line-height: 40px;
   }
 }

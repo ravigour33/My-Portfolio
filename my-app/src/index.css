@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
-
-div#root{
-        background: url("./assets/bb.jpg") no-repeat center center;
+div#root {
+  background: url("./assets/bb.jpg") no-repeat center center;
   background-size: cover;
-
 }

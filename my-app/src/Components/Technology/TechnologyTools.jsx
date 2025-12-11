@@ -24,7 +24,7 @@ import github from "../../assets/github.png";
 
 const ToolsTechnology = () => {
   return (
-    <section className="toolsTechnology">
+    <section className="toolsTechnology" id="technologies">
       <div className="toolsTinner">
         <h1>Technologies</h1>
         <p>

@@ -1,10 +1,11 @@
 import React from "react";
 import "./Banner.css";
 import MyImage from "../../assets/ravi.png";
+import MyImage2 from "../../assets/ravi2.png";
 
 const Banner = () => {
   return (
-    <section className="banner">
+    <section className="banner" id="banner">
       <div className="bInner">
 
         <div className="bLeft">
@@ -18,7 +19,7 @@ const Banner = () => {
         </div>
 
         <div className="bRight">
-          <img src={MyImage} alt="Banner Image" />
+          <img src={MyImage2} alt="Banner Image" />
         </div>
 
       </div>

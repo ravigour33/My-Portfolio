@@ -2,7 +2,6 @@ header {
   width: 100%;
   position: fixed;
   z-index: 100;
-  
 }
 
 .inner {
@@ -11,19 +10,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 25px; 
-  border-radius: 40px; 
+  padding: 20px 25px;
+  border-radius: 40px;
   background: rgba(255, 255, 255, 0.7); /* light white transparent */
-  backdrop-filter: blur(10px);         /* blur effect */
-  -webkit-backdrop-filter: blur(10px); 
- 
-            
+  backdrop-filter: blur(10px); /* blur effect */
+  -webkit-backdrop-filter: blur(10px);
 }
 
-
+.headerB1 a {
+  text-decoration: none;
+  color: #001A39;
+}
 
 .headerB1 h1 {
-  font-family: 'Stack Sans Notch', sans-serif;
+  font-family: "Stack Sans Notch", sans-serif;
   font-weight: 600;
   font-size: 24px;
   cursor: pointer;
@@ -36,14 +36,14 @@ header {
 }
 
 .headerB2 ul li a {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
   color: black;
 }
 
- .headerB2 ul li a {
+.headerB2 ul li a {
   position: relative;
   text-decoration: none;
   color: #000;
@@ -58,15 +58,123 @@ header {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #9B1C31;
-   
+  background-color: #9b1c31;
 }
 
 /* hover effect */
 
-
 .headerB2 ul li a:hover::after {
   width: 100%;
+}
+
+/* Hamburger button styles (refined) */
+.hamburger {
+  display: none; /* hidden on desktop */
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px; /* increases touch target */
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.hamburger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(155, 28, 49, 0.12);
+}
+.hamburger .line {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  margin: 3px 0;
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.18s ease,
+    background-color 0.2s ease;
+}
+.hamburger:hover .line {
+  background: #9b1c31;
+}
+.hamburger.open .line:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open .line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+.hamburger {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hamburger .line {
+    transition: none;
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .inner {
+    padding: 12px 18px;
+  }
+  header {
+    padding: 0 15px;
+  }
+
+  /* show hamburger on small screens */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* hide horizontal nav by default on mobile */
+  .headerB2 {
+    display: none;
+    position: absolute;
+    right: 18px;
+    left: 18px;
+    top: calc(100% + 10px);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 12px 16px;
+    z-index: 90;
+  }
+
+  /* when menu is opened */
+  .headerB2.openMenu {
+    display: block;
+  }
+
+  .headerB2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .headerB2 ul li a {
+    font-size: 18px;
+    padding: 8px 12px;
+    display: block;
+  }
+
+  /* make sure header content stacks nicely */
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
 }
 
 .headerB2 ul li a {
@@ -85,16 +193,15 @@ header {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #9B1C31;
+  background-color: #9b1c31;
   transition: width 0.4s ease;
 }
 
 /* hover effect */
 .headerB2 ul li a:hover {
-  color: #9B1C31;
+  color: #9b1c31;
 }
 
 .headerB2 ul li a:hover::after {
   width: 100%;
 }
-
